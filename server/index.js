@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '../public')));
 
 // ─── Database Setup ───────────────────────────────────────────────
-const db = new Database(path.join(__dirname, 'bytebot.db'));
+const db = new Database('/tmp/bytebot.db');
 
 db.exec(`
   CREATE TABLE IF NOT EXISTS users (
